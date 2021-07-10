@@ -1,18 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { ChakraProvider } from "@chakra-ui/react"
-import reportWebVitals from './reportWebVitals';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import reportWebVitals from "./reportWebVitals";
+import { Header } from "./components/Header";
+import { Theme } from "./global/Theme";
 ReactDOM.render(
-       
+  
   <React.StrictMode>
     <ChakraProvider>
-    <App />
+      <ColorModeScript
+        initialColorMode={Theme.config.initialColorMode}
+      ></ColorModeScript>
+      <App />
     </ChakraProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
