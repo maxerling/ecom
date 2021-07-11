@@ -1,6 +1,7 @@
 import React from "react";
 import {
   VStack,
+  Spacer,
   Flex,
   Heading,
   IconButton,
@@ -17,7 +18,8 @@ function App() {
           <Heading ml="8" size="md" fontweight="semibold" color="cyan.400">
             Ecom
           </Heading>
-        </Flex>
+        
+        <Spacer/>
         <IconButton
           aria-label="social"
           ml={8}
@@ -25,7 +27,13 @@ function App() {
           isRound={true}
           onClick={toggleColorMode}
         ></IconButton>
+        <IconButton aria-label='instagram' ml={2} icon={<FaInstagram/>} isRound={true}></IconButton>
+        <IconButton aria-label='github' ml={2} icon={<FaGithub/>} isRound={true}></IconButton>
+
+        </Flex>
       </VStack>
+      
+      
     </>
   );
 }
