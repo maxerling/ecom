@@ -56,7 +56,7 @@ export const Hero: React.FC<HeroProps> = () => {
             Software Developer
           </Text>
           <Text color={isDark ? "gray.200" : "gray.500"} mt={4}>
-            Man, Myth, The Legend
+            The Man, The Myth, The Legend
           </Text>
           <ButtonGroup size="lg" mt={8} spacing="8" fontWeight={700}>
             <Button colorScheme="green" >
@@ -77,7 +77,7 @@ export const Hero: React.FC<HeroProps> = () => {
             alignSelf="right"
             mt={isNotSmallerScreen ? 0 : 12}
             src="https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg"
-            boxSize="400px"
+            boxSize={isNotSmallerScreen ? '550px' : '0px'}
             borderRadius="md"
           />
         </MotionBox>

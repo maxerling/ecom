@@ -8,7 +8,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { FaMoon, FaSun, FaInstagram, FaGithub } from "react-icons/fa";
-import { Hero } from './components/'
+import { Hero, Portfolio } from './components/'
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
@@ -33,6 +33,7 @@ function App() {
         ></IconButton>
         </Flex>
         <Hero/>
+        <Portfolio/>
       </VStack>
       
       
