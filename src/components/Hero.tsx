@@ -58,11 +58,11 @@ export const Hero: React.FC<HeroProps> = () => {
           <Text color={isDark ? "gray.200" : "gray.500"} mt={4}>
             Man, Myth, The Legend
           </Text>
-          <ButtonGroup spacing="8">
-            <Button mt={8} size="lg" colorScheme="green" fontWeight={700}>
+          <ButtonGroup size="lg" mt={8} spacing="8" fontWeight={700}>
+            <Button colorScheme="green" >
               Projects
             </Button>
-            <Button mt={8} size="lg" colorScheme="pink" fontWeight={700}>
+            <Button colorScheme="pink">
               Contact Me
             </Button>
           </ButtonGroup>
