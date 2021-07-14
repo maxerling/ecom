@@ -21,7 +21,7 @@ export const Hero: React.FC<HeroProps> = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
 
-  const [isNotSmallerScreen] = useMediaQuery("(min-width:600px");
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:872px");
 
   return (
     <Stack>
@@ -34,13 +34,25 @@ export const Hero: React.FC<HeroProps> = () => {
         alignSelf="flex-start"
       >
         <Box mt={isNotSmallerScreen ? "0" : 16} align="flex-start">
-          <Text fontSize="7xl" mb={2} fontWeight="bold">
+          <Text
+            fontSize={isNotSmallerScreen ? "7xl" : "6xl"}
+            mb={2}
+            fontWeight="bold"
+          >
             Max Erling
           </Text>
-          <Text fontSize="3xl" textStyle="mono" fontWeight={100}>
+          <Text
+            fontSize={isNotSmallerScreen ? "3xl" : "2xl"}
+            textStyle="mono"
+            fontWeight={100}
+          >
             Software Engineer
           </Text>
-          <Text fontSize="3xl" textStyle="mono" fontWeight={100}>
+          <Text
+            fontSize={isNotSmallerScreen ? "3xl" : "2xl"}
+            textStyle="mono"
+            fontWeight={100}
+          >
             Software Developer
           </Text>
           <Text color={isDark ? "gray.200" : "gray.500"} mt={4}>
