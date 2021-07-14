@@ -69,7 +69,8 @@ export const Hero: React.FC<HeroProps> = () => {
         </Box>
         <MotionBox
           transitionDuration={"0.5s"}
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: 1.1,}
+          }
           pt={isNotSmallerScreen ? 40 : 0}
         >
           <Image
