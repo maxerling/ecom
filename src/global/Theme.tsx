@@ -1,10 +1,21 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
 
-const Config: ThemeConfig = {
+const LightConfig: ThemeConfig = {
   initialColorMode: "light",
   useSystemColorMode: true,
 };
 
-const Theme = extendTheme({ Config });
+const TextStyle = {
+  textStyles: {
+    mono : {
+      fontFamily: "Roboto Mono, monospace",
+}
+  }
+}
+
+
+
+
+const Theme = extendTheme(TextStyle, LightConfig);
 
 export { Theme };

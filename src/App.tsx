@@ -8,6 +8,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { FaMoon, FaSun, FaInstagram, FaGithub } from "react-icons/fa";
+import { Hero } from './components/'
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
   const isDark = colorMode === "dark";
@@ -20,17 +21,18 @@ function App() {
           </Heading>
         
         <Spacer/>
-        <IconButton
+       
+        <IconButton aria-label='instagram' ml={2} icon={<FaInstagram/>} isRound={true}></IconButton>
+        <IconButton aria-label='github' ml={2} mr={2} mb={6} icon={<FaGithub/>} isRound={true}></IconButton>
+        <IconButton 
           aria-label="social"
-          ml={8}
+          ml={2}
           icon={isDark ? <FaSun /> : <FaMoon />}
           isRound={true}
           onClick={toggleColorMode}
         ></IconButton>
-        <IconButton aria-label='instagram' ml={2} icon={<FaInstagram/>} isRound={true}></IconButton>
-        <IconButton aria-label='github' ml={2} icon={<FaGithub/>} isRound={true}></IconButton>
-
         </Flex>
+        <Hero/>
       </VStack>
       
       
